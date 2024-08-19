@@ -1,0 +1,29 @@
+// @mixin theme-light {
+//   background-color: $color-background-light;
+//   color: $color-text-light;
+//   a {
+//     color: $color-link-light;
+//   }
+// }
+
+// // @mixin theme-dark {
+// //   background-color: $color-background-dark;
+// //   color: $color-text-dark;
+// //   a {
+// //     color: $color-link-dark;
+// //   }
+// // }
+
+@mixin transition($properties) {
+  transition: $properties;
+}
+  
+@mixin z-index($level) {
+  @if $level == 'header' {
+    z-index: $z-index-header;
+  } @else if $level == 'sidebar' {
+    z-index: $z-index-sidebar;
+  } @else if $level == 'footer' {
+    z-index: $z-index-footer;
+  }
+}

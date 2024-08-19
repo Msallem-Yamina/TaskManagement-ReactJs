@@ -1,0 +1,15 @@
+@import '../../assets/variables';
+
+.calendar {
+    color: 'white';
+    border-radius: '5px';
+    padding: '5px';
+    .rbc-event {
+        &.completed-task {
+          background-color:  $completed-task; 
+        }
+        &.active-task {
+          background-color:  $active-task; 
+        }
+      }
+}

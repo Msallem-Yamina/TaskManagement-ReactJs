@@ -1,0 +1,9 @@
+@import '../../assets/variables';
+
+.completed-bar .recharts-rectangle {
+    fill: $completed-task;  
+  }
+
+.active-bar .recharts-rectangle {
+    fill: $active-task;  
+  }

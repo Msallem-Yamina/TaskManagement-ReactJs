@@ -1,0 +1,14 @@
+@import './variables';
+@import './mixins';
+@import './global';
+
+@import '../components/Header/Header.scss';
+@import '../components/Sidebar/Sidebar.scss';
+@import '../components/StatCard/StatCard.scss';
+@import '../components/TaskCalendar/Calendar.scss';
+@import '../components/reChart/chart.scss';
+@import '../components/reChart/taskChart.scss';
+@import '../components/AddTask/AddTaskForm.scss';
+@import '../components/Task/taskItem.scss';
+@import '../components/Footer/Footer.scss';
+

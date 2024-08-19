@@ -1,0 +1,12 @@
+footer {
+  position: fixed;
+  @include z-index(footer);
+  bottom: 0;
+  right: 0;
+  width: inherit;
+  background-color: $dark-mode-bg;
+
+  strong {
+    color: $main_color;
+  }
+}

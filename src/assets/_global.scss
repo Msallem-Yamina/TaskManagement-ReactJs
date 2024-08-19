@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-family ;
+  font-size: $font-size-base;
+  // @include theme-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $light-mode-bg;
+  color:$light-mode-text;
+}
+
+// body[data-theme='dark'] {
+//   @include theme-dark;
+// }
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+.nav-link,a {
+  color: initial; 
+  text-decoration: none;
+  padding-left: 0;
+}

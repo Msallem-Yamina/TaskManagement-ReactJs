@@ -1,0 +1,83 @@
+@import '../../assets/variables';
+@import '../../assets/mixins';
+
+.header {
+  @include z-index(header);
+  
+  h2{
+    color:$main_color;
+  }
+  input {
+    background: $light-mode-bg;
+    padding: 0.35em 0.45em;
+    border: 2px solid transparent;
+    transition:all 1s ease-in-out;
+    &:focus {
+      outline: none;
+    }
+    
+  }
+  
+  .line {
+    position: absolute;
+    background-color: $main_color;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .bottom,
+  .top {
+    height: 1px;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+  }
+  
+  .left,
+  .right {
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    transform: scaleY(0);
+  }
+  
+  .bottom {
+    bottom: 0;
+    transform-origin: bottom right;
+  }
+  
+  input:focus ~ .bottom {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+  
+  .right {
+    right: 0;
+    transform-origin: top right;
+  }
+  
+  input:focus ~ .right {
+    transform-origin: bottom right;
+    transform: scaleY(1);
+  }
+  
+  .top {
+    top: 0;
+    transform-origin: top left;
+  }
+  
+  input:focus ~ .top {
+    transform-origin: top right;
+    transform: scaleX(1);
+  }
+  
+  .left {
+    left: 0;
+    transform-origin: bottom left;
+  }
+  
+  input:focus ~ .left {
+    transform-origin: top left;
+    transform: scaleY(1);
+  }
+  
+}

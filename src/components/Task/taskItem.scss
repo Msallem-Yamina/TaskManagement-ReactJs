@@ -1,0 +1,15 @@
+tr {
+  vertical-align: middle;
+  &.task-completed {
+    td,th {
+      text-decoration: line-through;
+      color: gray;
+    }
+  }
+
+  &.task-active {
+    td,th {
+      color: initial; 
+    }
+  }
+}

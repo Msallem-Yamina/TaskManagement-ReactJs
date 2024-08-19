@@ -1,0 +1,13 @@
+@keyframes moveForward {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+.icon-rotate {
+  display: inline-block;
+  animation: moveForward 2s ease-in-out infinite;
+}

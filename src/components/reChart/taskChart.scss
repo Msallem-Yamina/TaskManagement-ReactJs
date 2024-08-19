@@ -1,0 +1,39 @@
+@import '../../assets/variables';
+
+.recharts-responsive-container {
+  #colorCompleted {
+    stop {
+      stop-color: $completed-task;
+    }
+    stroke: $completed-task;
+  }
+
+  #colorNotCompleted {
+    stop {
+      stop-color: $active-task;
+    }
+  }
+
+.recharts-legend-wrapper {
+  .recharts-legend-item:nth-of-type(1) {
+    .recharts-legend-item-text {
+      color: $active-task !important;
+    }
+
+    path {
+      fill: $active-task !important;
+    }
+  }
+
+  .recharts-legend-item:nth-of-type(2) {
+    .recharts-legend-item-text {
+      color: $completed-task !important;
+    }
+
+     path {
+      fill: $completed-task !important;
+    }
+  }
+
+  }
+}
