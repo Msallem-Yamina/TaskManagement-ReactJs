@@ -6,7 +6,7 @@ import TaskStats from '../components/TaskStats';
 
 const Home = () => {
   return (
-    <Container className='pb-5 pt-2'>
+    <Container className='Home pb-5 pt-2'>
       <TaskStats />
       <TaskCalendar />
       <TaskChart />
