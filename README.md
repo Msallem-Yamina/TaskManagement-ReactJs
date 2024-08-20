@@ -1,5 +1,21 @@
 # Link 
 https://Msallem-Yamina.github.io/TaskManagement-ReactJs/
+# Images 
+<div style="display: flex; gap: 10px;">
+
+  <div>
+    <img src="assets/images/cap 1.png"  style="width: 300px;"/>
+  </div>
+
+  <div>
+    <img src="assets/images/cap 2.png"  style="width: 300px;"/>
+  </div>
+
+  <div>
+    <img src="assets/images/cap 3.png" style="width: 300px;"/>
+  </div>
+
+</div>
 
 # Description
 My Tasks is a task management application built with React.js. This app offers an interactive and user-friendly interface for managing tasks, featuring advanced functionalities such as task search, calendar views, and graphical visualizations.
