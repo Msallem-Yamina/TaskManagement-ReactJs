@@ -17,7 +17,7 @@ const MainLayout = ({ children }) => {
           <Sidebar />
         </Col>
         <Col xs={10} style={{ background: '#F0F0F0', minHeight: '100vh' }}>
-          <main >
+          <main>
             {children}
           </main>
         </Col>
