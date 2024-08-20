@@ -7,6 +7,10 @@ import { useTranslation } from 'react-i18next';
 import { AiOutlinePlus } from 'react-icons/ai';
 import './AddTaskForm.scss';
 
+const isOverlapping = (task1, task2) => {
+  return !(task1.end <= task2.start || task2.end <= task1.start);
+};
+
 const AddTaskForm = () => {
   const { t } = useTranslation();
   const { tasks, addTask } = useContext(TaskContext);
@@ -15,6 +19,7 @@ const AddTaskForm = () => {
   const [end, setEnd] = useState('');
   const [modal, setModal] = useState(false);
   const [toastVisible, setToastVisible] = useState(false);
+  const [date, setDate] = useState(new Date())
   const toggle = () => setModal(!modal);
 
   const showToast = () => {
@@ -23,10 +28,7 @@ const AddTaskForm = () => {
       setToastVisible(false);
     }, 4000);
   };
-  const isOverlapping = (task1, task2) => {
-    return !(task1.end <= task2.start || task2.end <= task1.start);
-  };
-  
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,19 +36,27 @@ const AddTaskForm = () => {
     const newTaskStart = new Date(start);
     const newTaskEnd = new Date(end);
 
-    // Check for overlapping tasks
+    // console.log(newTaskStart.toDateString());
+
+    // Check for overlapping tasks on the same day and time
     const overlap = tasks.some(existingTask => {
       const existingTaskStart = new Date(existingTask.start);
       const existingTaskEnd = new Date(existingTask.end);
-      return isOverlapping(
-        { start: newTaskStart, end: newTaskEnd },
-        { start: existingTaskStart, end: existingTaskEnd }
-      );
+
+      // Check if the existing task is on the same day as the new task
+      const isSameDay = existingTaskStart.toDateString() === newTaskStart.toDateString();
+
+      // Check if the tasks overlap in time
+      const isTimeOverlap = newTaskStart < existingTaskEnd && newTaskEnd > existingTaskStart;
+
+      // Return true if both conditions are met
+      return isSameDay && isTimeOverlap;
     });
 
     if (overlap) {
       alert('There is already a task scheduled during this time.');
     } else if (title && start && end) {
+      // Add the new task if there's no overlap
       addTask({
         id: uuidv4(),
         title,
@@ -54,6 +64,8 @@ const AddTaskForm = () => {
         end: newTaskEnd,
         completed: false
       });
+
+      // Clear form fields
       setTitle('');
       setStart('');
       setEnd('');
@@ -61,6 +73,7 @@ const AddTaskForm = () => {
       showToast();
     }
   };
+
   const currentDateTime = new Date().toISOString().slice(0, 16);
 
   return (
@@ -82,7 +95,7 @@ const AddTaskForm = () => {
         </Col>
         <Col xs={6} className='d-flex justify-content-end'>
           <Button className='bg-transparent border-0 text-info justify-content-end' onClick={toggle}>
-            <AiOutlinePlus size={33}/>
+            <AiOutlinePlus size={33} />
           </Button>
           <Modal isOpen={modal} toggle={toggle} >
             <ModalHeader toggle={toggle} className='fw-bold text-info' tag={'h2'}> {t("add task")}</ModalHeader>
