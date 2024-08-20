@@ -1,10 +1,10 @@
 # Link 
 https://Msallem-Yamina.github.io/TaskManagement-ReactJs/
 # Images 
-<div style="display: flex; gap: 10px;">
+<div style="display: flex; justify-content:space-between; gap: 10px;">
 
   <div>
-    <img src="assets/images/cap 1.png"  style="width: 300px;"/>
+    <img src="assets/images/cap1.png"  style="width: 300px;"/>
   </div>
 
   <div>
