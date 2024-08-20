@@ -8,11 +8,11 @@ https://Msallem-Yamina.github.io/TaskManagement-ReactJs/
   </div>
 
   <div>
-    <img src="assets/images/cap 2.png"  style="width: 300px;"/>
+    <img src="./src/assets/images/cap 2.png"  style="width: 300px;"/>
   </div>
 
   <div>
-    <img src="assets/images/cap 3.png" style="width: 300px;"/>
+    <img src="./src/assets/images/cap 3.png" style="width: 300px;"/>
   </div>
 
 </div>
