@@ -1,28 +1,17 @@
 # Link 
 https://Msallem-Yamina.github.io/TaskManagement-ReactJs/
 # Images 
-<div >
+<div style="display:"flex";">
     <img src="./src/assets/images/cap1.png"  style="width: 300px;"/>
-
     <img src="./src/assets/images/cap2.png"  style="width: 300px;"/>
     <img src="./src/assets/images/cap 3.png" style="width: 300px;"/>
     <img src="./src/assets/images/cap 4.png" style="width: 300px;"/>
     <img src="./src/assets/images/cap 5.png" style="width: 300px;"/>
-  
     <img src="./src/assets/images/cap 6.png" style="width: 300px;"/>
-   <div>
     <img src="./src/assets/images/cap 7.png" style="width: 300px;"/>
-  </div>
-   <div>
     <img src="./src/assets/images/cap 8.png" style="width: 300px;"/>
-  </div>
-   <div>
     <img src="./src/assets/images/cap 9.png" style="width: 300px;"/>
-  </div>
-   <div>
     <img src="./src/assets/images/cap10.png" style="width: 300px;"/>
-  </div>
-
 </div> 
 
 # Description
