@@ -4,7 +4,7 @@ https://Msallem-Yamina.github.io/TaskManagement-ReactJs/
 <div style="display: flex; justify-content:space-between; gap: 10px;">
 
   <div>
-    <img src="assets/images/cap1.png"  style="width: 300px;"/>
+    <img src="./src/assets/images/cap1.png"  style="width: 300px;"/>
   </div>
 
   <div>
